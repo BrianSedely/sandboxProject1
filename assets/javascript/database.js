@@ -24,6 +24,17 @@ var dogPrefSm;
 // ***********
 $(document).ready(function () {
 
+    var config = {
+        apiKey: "AIzaSyBHk95-lubVI3oVjkYiWihfYzcL3e5eX8g",
+        authDomain: "bc-project1.firebaseapp.com",
+        databaseURL: "https://bc-project1.firebaseio.com",
+        projectId: "bc-project1",
+        storageBucket: "bc-project1.appspot.com",
+        messagingSenderId: "947495581665"
+    };
+
+    firebase.initializeApp(config);
+
     // checking if user is logged in.
     // all owner and dog profiles need to be tied to an ownerID.
     firebase.auth().onAuthStateChanged(firebaseUser => {
@@ -51,6 +62,8 @@ $(document).ready(function () {
             console.log(dogPrefMd);
             console.log(dogPrefSm);
 
-        } else {console.log("Not logged in");};
+        } else {
+            console.log("Not logged in");
+        };
     })
 })
