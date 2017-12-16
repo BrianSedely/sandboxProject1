@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Search</title>
+
+    <!-- =====================================================================
+                                ********SCRIPTS********
+         =====================================================================-->
+    <!-- CSS Reference -->
+    <link rel="stylesheet" type="text/css" href="assets\css\styleHome.css">
+    <!-- firebase.css -->
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Import materialize.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+    <!-- Firebase Ui -->
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+    <!-- jquery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <!-- =====================================================================
+                                ********NAVBAR********
+         =====================================================================-->
+    <div class="card-panel grey darken-4">
+        <nav class="card-panel grey darken-4">
+            <div class="nav-wrapper">
+                <a href="search.html" class="brand-logo" id="search" class="searchPage">
+                    <i class="material-icons">pets</i>Where's Spot</a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a href="search.html" id="search" class="searchPage">Search</a>
+                    </li>
+                    <li>
+                        <a href="profile.html" id="profile" class="dogProfile">Profile</a>
+                    </li>
+                    <li>
+                        <a href="index.html" id="about" class="aboutPage">About</a>
+                    </li>
+                    <li>
+                        <a href="index.html" id="btnLogout" class="aboutPage">
+                            <span class="light-green-text text-accent-3">Log Out</a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- =====================================================================
+                           ********GOOGLE MAPS********
+         =====================================================================-->
+
+    <iframe id="googleMaps" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d224445.01079799916!2d-81.5098659508528!3d28.48095320520121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sorlando+dog+parks!5e0!3m2!1sen!2sus!4v1513197060670"
+        width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+    <!-- =====================================================================
+                        ********DROP DOWN MENU********
+         =====================================================================-->
+    <!-- Dropdown Menu Where Can Spot Go -->
+    <div class="row">
+        <div class="input-field col s6">
+            <!-- Dropdown Trigger Where Can Spot Go -->
+            <a class='dropdown-button btn card-panel grey darken-4' href='#' data-activates='dropdown1'>Where Can Spot Go</a>
+
+            <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content'>
+                <li>
+                    <a href="#!"><span class="grey-text text-darken-4">Dog Park</a></span>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <span class="grey-text text-darken-4">Pet Friendly Location</a></span>
+                </li>
+            </ul>
+        </div>
+    <!-- =====================================================================
+                            ********FOOTER******** 
+         =====================================================================-->
+    <footer class="page-footer card-panel grey lighten-3">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s6">
+                    <h5 class="white-text">
+                        <span class="black-text">Add Group Member's Info</h5>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <span class="black-text">© 2017 Copyright BEF</span>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- =====================================================================
+                                ********SCRIPTS********
+         =====================================================================-->
+    <!-- local javascript -->
+    <script src="assets/javascript/app.js"></script>
+    <!-- materialize.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</body>
+
+</html>

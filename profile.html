@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Profile</title>
+
+    <!-- =====================================================================
+                                ********SCRIPTS********
+         =====================================================================-->
+    <!-- CSS Reference -->
+    <link rel="stylesheet" type="text/css" href="assets\css\styleHome.css">
+    <!-- firebase.css -->
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Import materialize.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+    <!-- jquery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <!-- =====================================================================
+                                ********NAVBAR********
+         =====================================================================-->
+    <div class="card-panel grey darken-4">
+        <nav class="card-panel grey darken-4">
+            <div class="nav-wrapper">
+                <a href="search.html" class="brand-logo" id="search" class="searchPage">
+                    <i class="material-icons">pets</i>Where's Spot</a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a href="search.html" id="search" class="searchPage">Search</a>
+                    </li>
+                    <li>
+                        <a href="profile.html" id="profile" class="dogProfile">Profile</a>
+                    </li>
+                    <li>
+                        <a href="index.html" id="about" class="aboutPage">About</a>
+                    </li>
+                    <li>
+                        <a href="index.html" id="btnLogout" class="aboutPage">
+                            <span class="light-green-text text-accent-3">Log Out</a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- =====================================================================
+                         ********GOOGLE IMAGE********
+         =====================================================================-->
+    <div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5 z-depth-1">
+            <div class="row valign-wrapper">
+                <div class="col s12">
+                    <div id="imageProfile"></div>
+                    <div id="fireData">
+                        <!-- value -->
+                        <pre id="object"></pre>
+                    </div>
+                </div>
+                <div class="col s10">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 
+        <div id="imageProfile"></div>
+            <div id="fireData">
+                value
+            <pre id="object"></pre>
+        </div> 
+    -->
+
+    <!-- =====================================================================
+                        ********DOG'S PROFILE FORM********
+         =====================================================================-->
+    <div class="row">
+        <form class="col s12">
+            <!-- Dog image -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <image id="dogImage" src="https://static-s.aa-cdn.net/img/ios/1034197315/6294a01ff5937e26ca7539bea819db52" />
+                    <br \>
+                    <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+                </div>
+            </div>
+
+            <!-- Input Dog's Information -->
+            <div class="row">
+                <div class="input-field col s6">
+                    <!-- Input Dog's Name -->
+                    <input id="dog_name" type="text" class="validate">
+                    <label for="dog_name">
+                        <span class="grey-text text-darken-4">Dog's Name</span>
+                    </label>
+                </div>
+                <div class="input-field col s6">
+                    <!-- Input Dog's Breed -->
+                    <input id="dog_breed" type="text" class="validate">
+                    <label for="dog_breed">
+                        <span class="grey-text text-darken-4">Dog's Breed</span>
+                    </label>
+                </div>
+            </div>
+            <!-- Dropdown Menu Dog's Size -->
+            <div class="row">
+                <div class="input-field col s4">
+                    <!-- Dropdown Trigger Dog's Size -->
+                    <a class='dropdown-button btn card-panel grey darken-4' href='#' data-activates='dropdown1'>Dog's Size</a>
+
+                    <!-- Dropdown Structure -->
+                    <ul id='dropdown1' class='dropdown-content'>
+                        <li>
+                            <a href="#!">
+                                <span class="grey-text text-darken-4">Small (&lt;20 lbs)</span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#!">
+                                <span class="grey-text text-darken-4">Medium (20 lbs - 60 lbs)</span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#!">
+                                <span class="grey-text text-darken-4">Large (&gt;60)</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Dropdown Menu Dog's Temperament -->
+                <div class="input-field col s4">
+                    <!-- Dropdown Trigger Dog's Temperament -->
+                    <a class='dropdown-button btn card-panel grey darken-4' href='#' data-activates='dropdown2'>Dog's Mood</a>
+
+                    <!-- Dropdown Structure -->
+                    <ul id='dropdown2' class='dropdown-content'>
+                        <li>
+                            <a href="#!">
+                                <span class="grey-text text-darken-4">Chill</span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#!">
+                                <span class="grey-text text-darken-4">Modest</span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#!">
+                                <span class="grey-text text-darken-4">A Jumper</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Dropdown Menu Dog's Vaccination -->
+                <div class="input-field col s4">
+                    <!-- Dropdown Trigger Dog's Temperament -->
+                    <a class='dropdown-button btn card-panel grey darken-4' href='#' data-activates='dropdown3'>Dog's Vac.</a>
+
+                    <!-- Dropdown Structure -->
+                    <ul id='dropdown3' class='dropdown-content'>
+                        <li>
+                            <a href="#!">
+                                <span class="grey-text text-darken-4">Yes</span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#!">
+                                <span class="grey-text text-darken-4">No</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Checkbox Option -->
+            <p>
+                <input type="checkbox" id="test5" />
+                <label for="test5">Ok With Dogs &gt;60 lbs</label>
+            </p>
+            <p>
+                <input type="checkbox" id="test6" />
+                <label for="test6">Ok With Dogs &gt;20 lbs</label>
+            </p>
+            <p>
+                <input type="checkbox" id="test7" />
+                <label for="test7">Ok With Dogs &lt;20 lbs</label>
+            </p>
+            <br \>
+            <!-- Submit Button -->
+            <button class="btn waves-effect waves-light card-panel grey darken-4" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
+        </form>
+    </div>
+
+    <!-- =====================================================================
+                            ********FOOTER******** 
+         =====================================================================-->
+    <footer class="page-footer card-panel grey lighten-3">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s6">
+                    <h5 class="white-text">
+                        <span class="black-text">Add Group Member's Info</h5>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <span class="black-text">© 2017 Copyright BEF</span>
+            </div>
+        </div>
+    </footer>
+    <!-- local javascript -->
+    <script src="assets/javascript/app.js"></script>
+  
+    <!-- =====================================================================
+                                        ********SCRIPTS********
+                 =====================================================================-->
+    <!-- local javascript -->
+    <script src="assets/javascript/app.js"></script>
+    <!-- materialize.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</body>
+
+</html>

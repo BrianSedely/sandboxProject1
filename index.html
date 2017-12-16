@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Profile</title>
+
+    <!-- =====================================================================
+                                ********SCRIPTS********
+         =====================================================================-->
+    <!-- CSS Reference -->
+    <link rel="stylesheet" type="text/css" href="assets\css\styleHome.css">
+    <!-- firebase.css -->
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Import materialize.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+    <!-- jquery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- CSS Reference -->
+    <link rel="stylesheet" type="text/css" href="assets\css\style.css">
+    <link rel="stylesheet" type="text/css" href="assets\css\styleHome.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+</head>
+
+<body>
+
+    <!-- =====================================================================
+                                ********NAVBAR********
+         =====================================================================-->
+    <div class="card-panel grey darken-4">
+        <nav class="card-panel grey darken-4">
+            <div class="nav-wrapper">
+                <a href="search.html" class="brand-logo" id="search" class="searchPage">
+                    <i class="material-icons">pets</i>Where's Spot</a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a href="search.html" id="search" class="searchPage">Search</a>
+                    </li>
+                    <li>
+                        <a href="profile.html" id="profile" class="dogProfile">Profile</a>
+                    </li>
+                    <li>
+                        <a href="index.html" id="about" class="aboutPage">About</a>
+                    </li>
+                    <li>
+                        <a href="index.html" id="btnLogout" class="aboutPage">
+                            <span class="light-green-text text-accent-3">Log Out</a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- =====================================================================
+                         ********BACKGROUND CLIP********
+         =====================================================================-->
+
+    <video id="bgVideo" autoplay loop muted width="100%">
+        <source src="assets/media/videoplayback.mp4" type="video/mp4" />
+        <source src="assets/media/videoplayback.webm" type="video/webm" />
+    </video>
+
+    <!-- =====================================================================
+                            ********BLOCK OF TEXT********
+         =====================================================================-->
+    <br>
+    <br \>
+    <div id="fade" class="card-panel"></div>
+    <div class="content">
+        <div>
+            <h1>About Where’s Spot</h1>
+            Where’s Spot is a website that helps man’s best friend find new friends; we help dogs connect to each other. With our state
+            of the art locator a dog can make new friends without the awkward interaction of their owners.
+            <br>
+            <br \> When dog owners are trying to schedule play date for their dogs, it can get difficult to approach other dog
+            owner. Where’s Spot, helps skip this process. This website allows you to message different dog owners and get
+            in contact with them before meeting in person; we act as an ice breaker.
+            <br>
+            <br \> Activities are always fun when they are done with friends. Where’s Spot can help a dog connect to new friends
+            while at the park or when shopping. Making new friends means more dog parties, Bring out the dog biscuits!!!!!
+        </div>
+
+        <div id="firebaseui-auth-container"></div>
+    </div>
+    </div>
+    <br>
+    <br \>
+
+    <!-- =====================================================================
+                            ********FOOTER******** grey lighten-1
+         =====================================================================-->
+    <footer class="page-footer card-panel grey lighten-3">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s6">
+                    <h5 class="white-text">
+                        <span class="black-text">Add Group Member's Info</h5>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <span class="black-text">© 2017 Copyright BEF</span>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- =====================================================================
+                                        ********SCRIPTS********
+                 =====================================================================-->
+    <!-- local javascript -->
+    <script src="assets/javascript/app.js"></script>
+    <!-- materialize.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>
+        var uiConfig = {
+            signInSuccessUrl: 'profile.html',
+            signInOptions: [
+                //Google profile auth 
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+            ],
+        };
+
+        // Initialize the FirebaseUI Widget using Firebase.
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        // The start method will wait until the DOM is loaded.
+        ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+
+</body>
+
+</html>
