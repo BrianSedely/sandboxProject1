@@ -10,21 +10,20 @@
     <!-- =====================================================================
                                 ********SCRIPTS********
          =====================================================================-->
-    <!-- CSS Reference -->
-    <link rel="stylesheet" type="text/css" href="assets\css\styleHome.css">
     <!-- firebase.css -->
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Import materialize.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
     <!-- firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
     <!-- Firebase Ui -->
     <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
     <!-- jquery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- CSS Reference -->
+    <link rel="stylesheet" type="text/css" href="assets\css\styleHome.css">
 </head>
 
 <body>
@@ -32,8 +31,8 @@
     <!-- =====================================================================
                                 ********NAVBAR********
          =====================================================================-->
-    <div class="card-panel grey darken-4">
-        <nav class="card-panel grey darken-4">
+    <div class="card-panel grey darken-4 navBar">
+        <nav class="card-panel grey darken-4 navBar">
             <div class="nav-wrapper">
                 <a href="search.html" class="brand-logo" id="search" class="searchPage">
                     <i class="material-icons">pets</i>Where's Spot</a>
@@ -76,14 +75,39 @@
             <!-- Dropdown Structure -->
             <ul id='dropdown1' class='dropdown-content'>
                 <li>
-                    <a href="#!"><span class="grey-text text-darken-4">Dog Park</a></span>
+                    <a href="#!">
+                        <span class="grey-text text-darken-4">Dog Park</a>
+                    </span>
                 </li>
                 <li class="divider"></li>
                 <li>
-                    <span class="grey-text text-darken-4">Pet Friendly Location</a></span>
+                    <span class="grey-text text-darken-4">Pet Friendly Location</a>
+                    </span>
                 </li>
             </ul>
         </div>
+
+        <!-- Dropdown Menu Where's Spot -->
+        <div class="input-field col s6">
+            <!-- Dropdown Where's Spot -->
+            <a class='dropdown-button btn card-panel grey darken-4' href='#' data-activates='dropdown2'>Where's Spot</a>
+
+            <!-- Dropdown Structure -->
+            <ul id='dropdown2' class='dropdown-content'>
+                <li>
+                    <span class="grey-text text-darken-4">Orlando</span>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <span class="grey-text text-darken-4">Winter Garden</span>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <span class="grey-text text-darken-4">Winter Park</span>
+                </li>
+            </ul>
+        </div>
+    </div>
     <!-- =====================================================================
                             ********FOOTER******** 
          =====================================================================-->
@@ -103,17 +127,15 @@
             </div>
         </div>
     </footer>
-
-
     <!-- =====================================================================
                                 ********SCRIPTS********
          =====================================================================-->
-    <!-- local javascript -->
-    <script src="assets/javascript/app.js"></script>
-    <script src="assets/javascript/database.js"></script>
-    
     <!-- materialize.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- local javascript -->
+    <script src="assets/javascript/app.js"></script>
+    <!-- local javascript -->
+    <script src="assets/javascript/database.js"></script>
 </body>
 
 </html>

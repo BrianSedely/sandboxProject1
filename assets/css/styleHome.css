@@ -60,10 +60,18 @@ video#bgVideo {
 /* ======== Sticky Footer ======== */
 body {
     display: flex;
-    min-height: 100vh;
+    min-height: 100%;
     flex-direction: column;
   }
 
   main {
     flex: 1 0 auto;
+  }
+  #indexBar{
+      padding: 0;
+      margin:0;
+  }
+  .navBar{
+    padding: 0;
+    margin:0;
   }

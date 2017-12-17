@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,8 +12,6 @@
     <!-- =====================================================================
                                 ********SCRIPTS********
          =====================================================================-->
-    <!-- CSS Reference -->
-    <link rel="stylesheet" type="text/css" href="assets\css\styleHome.css">
     <!-- firebase.css -->
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
     <!--Import Google Icon Font-->
@@ -23,6 +22,8 @@
     <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
     <!-- jquery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- CSS Reference -->
+    <link rel="stylesheet" type="text/css" href="assets\css\styleHome.css">
 </head>
 
 <body>
@@ -30,8 +31,8 @@
     <!-- =====================================================================
                                 ********NAVBAR********
          =====================================================================-->
-    <div class="card-panel grey darken-4">
-        <nav class="card-panel grey darken-4">
+    <div class="card-panel grey darken-4 navBar">
+        <nav class="card-panel grey darken-4 navBar">
             <div class="nav-wrapper">
                 <a href="search.html" class="brand-logo" id="search" class="searchPage">
                     <i class="material-icons">pets</i>Where's Spot</a>
@@ -74,15 +75,6 @@
         </div>
     </div>
 
-
-    <!-- 
-        <div id="imageProfile"></div>
-            <div id="fireData">
-                value
-            <pre id="object"></pre>
-        </div> 
-    -->
-
     <!-- =====================================================================
                         ********DOG'S PROFILE FORM********
          =====================================================================-->
@@ -101,113 +93,74 @@
             <div class="row">
                 <div class="input-field col s6">
                     <!-- Input Dog's Name -->
-                    <input id="dog_name" type="text" class="validate">
-                    <label for="dog_name">
+                    <input id="dogName" type="text" class="validate">
+                    <label for="dogName">
                         <span class="grey-text text-darken-4">Dog's Name</span>
                     </label>
                 </div>
                 <div class="input-field col s6">
                     <!-- Input Dog's Breed -->
-                    <input id="dog_breed" type="text" class="validate">
-                    <label for="dog_breed">
+                    <input id="dogBreed" type="text" class="validate">
+                    <label for="dogBreed">
                         <span class="grey-text text-darken-4">Dog's Breed</span>
                     </label>
                 </div>
             </div>
-            <!-- Dropdown Menu Dog's Size -->
+
+            <!-- Dropdown Menu Dog Sizev -->
             <div class="row">
-                <div class="input-field col s4">
-                    <!-- Dropdown Trigger Dog's Size -->
-                    <a class='dropdown-button btn card-panel grey darken-4' href='#' data-activates='dropdown1'>Dog's Size</a>
-
-                    <!-- Dropdown Structure -->
-                    <ul id='dropdown1' class='dropdown-content'>
-                        <li>
-                            <a href="#!">
-                                <span class="grey-text text-darken-4">Small (&lt;20 lbs)</span>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#!">
-                                <span class="grey-text text-darken-4">Medium (20 lbs - 60 lbs)</span>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#!">
-                                <span class="grey-text text-darken-4">Large (&gt;60)</span>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="input-field col s6">
+                    <select>
+                        <optgroup label="team 1">
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                        </optgroup>
+                        <optgroup label="team 2">
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                        </optgroup>
+                    </select>
+                    <label>Optgroups</label>
                 </div>
 
-                <!-- Dropdown Menu Dog's Temperament -->
-                <div class="input-field col s4">
-                    <!-- Dropdown Trigger Dog's Temperament -->
-                    <a class='dropdown-button btn card-panel grey darken-4' href='#' data-activates='dropdown2'>Dog's Mood</a>
-
-                    <!-- Dropdown Structure -->
-                    <ul id='dropdown2' class='dropdown-content'>
-                        <li>
-                            <a href="#!">
-                                <span class="grey-text text-darken-4">Chill</span>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#!">
-                                <span class="grey-text text-darken-4">Modest</span>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#!">
-                                <span class="grey-text text-darken-4">A Jumper</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Dropdown Menu Dog's Vaccination -->
-                <div class="input-field col s4">
-                    <!-- Dropdown Trigger Dog's Temperament -->
-                    <a class='dropdown-button btn card-panel grey darken-4' href='#' data-activates='dropdown3'>Dog's Vac.</a>
-
-                    <!-- Dropdown Structure -->
-                    <ul id='dropdown3' class='dropdown-content'>
-                        <li>
-                            <a href="#!">
-                                <span class="grey-text text-darken-4">Yes</span>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#!">
-                                <span class="grey-text text-darken-4">No</span>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="input-field col s6">
+                    <select>
+                        <optgroup label="team 1">
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                        </optgroup>
+                        <optgroup label="team 2">
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                        </optgroup>
+                    </select>
+                    <label>Optgroups</label>
                 </div>
             </div>
-            <!-- Checkbox Option -->
-            <p>
-                <input type="checkbox" id="test5" />
-                <label for="test5">Ok With Dogs &gt;60 lbs</label>
-            </p>
-            <p>
-                <input type="checkbox" id="test6" />
-                <label for="test6">Ok With Dogs &gt;20 lbs</label>
-            </p>
-            <p>
-                <input type="checkbox" id="test7" />
-                <label for="test7">Ok With Dogs &lt;20 lbs</label>
-            </p>
-            <br \>
-            <!-- Submit Button -->
-            <button class="btn waves-effect waves-light card-panel grey darken-4" type="submit" name="action">Submit
-                <i class="material-icons right">send</i>
-            </button>
-        </form>
+
+    </div>
+    </div>
+
+
+    <!-- Checkbox Option -->
+    <p>
+        <input type="checkbox" id="dogPrefLg" />
+        <label for="dogPrefLg">Ok With Dogs &gt;60 lbs</label>
+    </p>
+    <p>
+        <input type="checkbox" id="dogPrefMd" />
+        <label for="dogPrefMd">Ok With Dogs &gt;20 lbs</label>
+    </p>
+    <p>
+        <input type="checkbox" id="dogPrefSm" />
+        <label for="dogPrefSm">Ok With Dogs &lt;20 lbs</label>
+    </p>
+    <br \>
+    <!-- Submit Button -->
+    <button id="add-dog" class="btn waves-effect waves-light card-panel grey darken-4" type="submit" name="action">Submit
+        <i class="material-icons right">send</i>
+    </button>
+    </form>
     </div>
 
     <!-- =====================================================================
@@ -229,19 +182,13 @@
             </div>
         </div>
     </footer>
-    <!-- local javascript -->
-    <script src="assets/javascript/app.js"></script>
-
     <!-- =====================================================================
                                         ********SCRIPTS********
-                 =====================================================================-->
-
+         =====================================================================-->
     <!-- materialize.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <!-- local javascript -->
     <script src="assets/javascript/app.js"></script>
-    <script src="assets/javascript/database.js"></script>
-
 </body>
 
 </html>

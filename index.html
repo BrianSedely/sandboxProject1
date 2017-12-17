@@ -8,23 +8,17 @@
 
     <title>Profile</title>
 
-    <!-- =====================================================================
-                                ********SCRIPTS********
-         =====================================================================-->
-    <!-- CSS Reference -->
-    <link rel="stylesheet" type="text/css" href="assets\css\styleHome.css">
-    <!-- firebase.css -->
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Import materialize.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!-- firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+    <!-- Firebase Ui -->
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
     <!-- jquery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- CSS Reference -->
-    <link rel="stylesheet" type="text/css" href="assets\css\style.css">
     <link rel="stylesheet" type="text/css" href="assets\css\styleHome.css">
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
 </head>
@@ -34,8 +28,8 @@
     <!-- =====================================================================
                                 ********NAVBAR********
          =====================================================================-->
-    <div class="card-panel grey darken-4">
-        <nav class="card-panel grey darken-4">
+    <div class="card-panel grey darken-4 navBar" id="indexBar">
+        <nav class="card-panel grey darken-4 navBar">
             <div class="nav-wrapper">
                 <a href="search.html" class="brand-logo" id="search" class="searchPage">
                     <i class="material-icons">pets</i>Where's Spot</a>
@@ -60,8 +54,8 @@
     </div>
 
     <!-- =====================================================================
-                         ********BACKGROUND CLIP********
-         =====================================================================-->
+                                 ********BACKGROUND CLIP********
+                 =====================================================================-->
 
     <video id="bgVideo" autoplay loop muted width="100%">
         <source src="assets/media/videoplayback.mp4" type="video/mp4" />
@@ -69,8 +63,8 @@
     </video>
 
     <!-- =====================================================================
-                            ********BLOCK OF TEXT********
-         =====================================================================-->
+                                    ********BLOCK OF TEXT********
+                 =====================================================================-->
     <br>
     <br \>
     <div id="fade" class="card-panel"></div>
@@ -95,8 +89,8 @@
     <br \>
 
     <!-- =====================================================================
-                            ********FOOTER******** grey lighten-1
-         =====================================================================-->
+                                    ********FOOTER******** grey lighten-1
+                 =====================================================================-->
     <footer class="page-footer card-panel grey lighten-3">
         <div class="container">
             <div class="row">
@@ -114,15 +108,11 @@
         </div>
     </footer>
 
-
-    <!-- =====================================================================
-                                        ********SCRIPTS********
-                 =====================================================================-->
-    <!-- local javascript -->
-    <script src="assets/javascript/app.js"></script>
     <script src="assets/javascript/database.js"></script>
     <!-- materialize.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- local javascript -->
+    <script src="assets/javascript/app.js"></script>
     <script>
         var uiConfig = {
             signInSuccessUrl: 'profile.html',
@@ -131,12 +121,12 @@
                 firebase.auth.GoogleAuthProvider.PROVIDER_ID,
             ],
         };
-
         // Initialize the FirebaseUI Widget using Firebase.
         var ui = new firebaseui.auth.AuthUI(firebase.auth());
         // The start method will wait until the DOM is loaded.
         ui.start('#firebaseui-auth-container', uiConfig);
     </script>
+
 
 </body>
 
